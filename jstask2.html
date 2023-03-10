@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Page Title</title>
-	</head>
-	<body>
-<script src="jstask2.js"></script>		
-		<fieldset>
-			<legend>
-				<h2>Login</h2>
-			</legend>
+<html lang="en">
 
-			<label for="name">Username: </label>
-			<input id="name" name="uname" type="text">
-			<br>
-			<br>
-			<label for="pwd">Password: </label>
-			<input id="pwd" name="npwd" type="password">
-			<label>Confirm Password: </label>
-			<input id="cpwd" name="cpwd" type="password">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JStask2</title>
+    <script src="jstask2.js"></script>
+</head>
 
-			<button type="button" onclick="validate()">Submit</button>
-		</fieldset>
-		
-	</body>
+<body>
+
+
+    <form id="res" method="post" name="form">
+        <fieldset>
+            <legend style="text-align:center;">Student Details </legend>
+            <label>First Name: </label><br>
+            <input type="text" name="fname"  placeholder="Enter the first name "><br><br>
+
+            <label> Last Name : </label><br>
+            <input type="text" name="lname"  placeholder="Enter the last name "><br><br>
+
+            <label>Date of Birth : </label>
+            <input type="text" id="dob" name="dob"  placeholder="mm/dd/yyyy"><br><br>
+
+            <label>Gender: </label><br>
+            <input type="radio"  name="gen" value="Male">Male
+            <input type="radio"  name="gen" value="Female">Female
+
+            <button type="button" onclick="details()"> Submit </button>
+
+    </form>
+   
+
+
+
+
+</body>
+
 </html>

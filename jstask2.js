@@ -1,31 +1,37 @@
-function validate(){
-    var username = document.getElementById("name").value;
-    var password = document.getElementById("pwd").value;
-    var cpassword= document.getElementById("cpwd").value;
-
-    //validation for username
-    var vuname = /^[a-zA-Z]{5,16}$/;
-    var password0 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,10}$/;
-
-    if(!vuname.test(username)){
-        alert("Enter a valid username only 5 to 16 characters of alphabets are allowed");
-    }else if(username==""){
-        alert("Please give the userrname");
-    }
-    else if(!password0.test(password)){
-        alert("Enter a valid password with alphabets, numbers and special characters");
-    }else if(password==""){
-        alert("Password should not be blank");
-    }else if(cpassword==""){
-        alert("Confirm password should not be blank");
-    }else if(password!=cpassword){
-        alert("Password and confirm password mismatched");
-    }else {
-        alert("Successfully logged in");
-
-    }
-
+function details(){
+    var Username = document.form.fname.value;
+    var Lastname = document.form.lname.value;
     
+    var gender = document.form.gen.value;
+    var dob = document.form.dob.value;
+    var todayDate= new Date();
+    var bday= new Date(dob);
+    var age;
+    
+  if(Username.length<0){
+alert("Username is empty!");
+  }else if(Lastname.length<0){
+    alert("Please fill the lastname");
+  }else if(dob.length<0){
+    alert("Please fill the date of birth");
+  }
+//gender checking
+  if(gender=='male'){
+    
+    alert("The gender is a male");
+  }else if(gender=='female'){
+    
+    alert("The gender is a Female");
+  }else if(gender==""){
+    alert("Give the gender");
+  }
+//Eligibility for vote
+age=todayDate.getFullYear()-bday.getFullYear();
+if(age>18){
+  alert(Username+" m"+Lastname+" age "+age+" is eligible to vote");
+}else{
+  alert(Username+" m"+Lastname+" age "+age+" Wait to reach 18 years’");
 
+}
 
 }
